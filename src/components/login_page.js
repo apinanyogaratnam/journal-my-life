@@ -8,6 +8,7 @@ const LoginPage = () => {
             <NavBar />
             <Title />
             <SubTitle />
+            <hr />
         </div>
     )
 }

@@ -55,3 +55,8 @@ h1 {
   max-width: 510px;
   letter-spacing: 1px;
 }
+
+hr {
+  max-width: 300px;
+  margin-top: 20px;
+}
