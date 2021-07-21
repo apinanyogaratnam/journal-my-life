@@ -9,25 +9,33 @@ const NavBar = () => {
                 <h4>Features</h4>
             </Link>
             &emsp;
+            &emsp;
             <div class="vl" />
+            &emsp;
             &emsp;
             <Link to="">
                 <h4>About</h4>
             </Link>
             &emsp;
+            &emsp;
             <div class="vl" />
+            &emsp;
             &emsp;
             <Link to="">
                 <h4>Pricing</h4>
             </Link>
             &emsp;
+            &emsp;
             <div class="vl" />
+            &emsp;
             &emsp;
             <Link to="">
                 <h4>Source code</h4>
             </Link>
             &emsp;
+            &emsp;
             <div class="vl" />
+            &emsp;
             &emsp;
             <Link to="">
                 <h4>Contact</h4>

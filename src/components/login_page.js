@@ -1,11 +1,12 @@
 import React from 'react'
 import '../index.css';
-import { NavBar } from './login-page-components/index';
+import { NavBar, Title } from './login-page-components/index';
 
 const LoginPage = () => {
     return (
         <div>
             <NavBar />
+            <Title />
         </div>
     )
 }
