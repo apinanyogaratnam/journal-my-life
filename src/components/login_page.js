@@ -5,28 +5,36 @@ import { Link } from 'react-scroll';
 const LoginPage = () => {
     return (
         <div>
-            {/* Nav Bar */}
-            <Link to="">
+            {/* Nav Bar - create new file for it*/}
                 <div className="nav-bar">
-                    <h4>Features</h4>
+                    <Link to="">
+                        <h4>Features</h4>
+                    </Link>
                     &emsp;
                     <div class="vl" />
                     &emsp;
-                    <h4>About</h4>
+                    <Link to="">
+                        <h4>About</h4>
+                    </Link>
                     &emsp;
                     <div class="vl" />
                     &emsp;
-                    <h4>Pricing</h4>
+                    <Link to="">
+                        <h4>Pricing</h4>
+                    </Link>
                     &emsp;
                     <div class="vl" />
                     &emsp;
-                    <h4>Source code</h4>
+                    <Link to="">
+                        <h4>Source code</h4>
+                    </Link>
                     &emsp;
                     <div class="vl" />
                     &emsp;
-                    <h4>Contact</h4>
+                    <Link to="">
+                        <h4>Contact</h4>
+                    </Link>
                 </div>
-            </Link>
         </div>
     )
 }
