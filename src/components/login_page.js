@@ -7,7 +7,17 @@ const LoginPage = () => {
         <div>
             {/* Nav Bar */}
             <Link to="">
-                <h4>Features</h4>
+                <div className="nav-bar">
+                    <h4>Features</h4>
+                    &emsp; 
+                    <h4>About</h4>
+                    &emsp;
+                    <h4>Pricing</h4>
+                    &emsp;
+                    <h4>Source Code</h4>
+                    &emsp;
+                    <h4>Contact</h4>
+                </div>
             </Link>
         </div>
     )

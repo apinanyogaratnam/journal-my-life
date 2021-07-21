@@ -14,8 +14,15 @@ code {
     monospace;
 }
 
-
 h4 {
   color: grey;
   font-family: 'Lato';
+  display: inline-block;
+  text-align: center;
+}
+
+.nav-bar {
+  width: max-content;
+  display: block;
+  text-align: center;
 }
