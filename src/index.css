@@ -25,4 +25,12 @@ h4 {
   width: max-content;
   display: block;
   text-align: center;
+  margin-left: 950px;
 }
+
+.vl {
+  border-left: 1px solid green;
+  height: 12px;
+  display: inline-block;
+}
+

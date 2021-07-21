@@ -9,12 +9,20 @@ const LoginPage = () => {
             <Link to="">
                 <div className="nav-bar">
                     <h4>Features</h4>
-                    &emsp; 
+                    &emsp;
+                    <div class="vl" />
+                    &emsp;
                     <h4>About</h4>
+                    &emsp;
+                    <div class="vl" />
                     &emsp;
                     <h4>Pricing</h4>
                     &emsp;
-                    <h4>Source Code</h4>
+                    <div class="vl" />
+                    &emsp;
+                    <h4>Source code</h4>
+                    &emsp;
+                    <div class="vl" />
                     &emsp;
                     <h4>Contact</h4>
                 </div>
