@@ -2,8 +2,9 @@ import React from 'react'
 
 const LoginButtons = () => {
     return (
-        <div>
-            
+        <div className="button-container">
+            <button><strong>Continue With Google</strong></button>
+            <button>Browse Anonymously</button>
         </div>
     )
 }
