@@ -22,7 +22,7 @@ h4 {
 }
 
 h1 {
-  color: rgb(68, 67, 67);
+  color: rgb(97, 97, 97);
   font-family: 'Lato';
   display: inline-block;
   text-align: center;
@@ -37,6 +37,11 @@ h1 {
   display: block;
   text-align: center;
   margin-left: 800px;
+}
+
+.title {
+  letter-spacing: 5px;
+  margin-top: 200px;
 }
 
 .vl {

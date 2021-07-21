@@ -1,9 +1,9 @@
 import React from 'react'
-import '../../index.css'
+import '../../index'
 
 const title = () => {
     return (
-        <div>
+        <div className="title">
             <h1>Journal My Life</h1>
         </div>
     )
