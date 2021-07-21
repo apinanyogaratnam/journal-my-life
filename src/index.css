@@ -76,11 +76,16 @@ button {
 }
 
 button:hover {
-  background-color: rgb(61, 60, 60)
+  background-color: rgb(61, 60, 60);
+  color: white;
 }
 
 .button-container {
   width: 175px;
   margin-left: 575px;
   margin-top: 30px;
+}
+
+.hover-links:hover {
+  color: black;
 }

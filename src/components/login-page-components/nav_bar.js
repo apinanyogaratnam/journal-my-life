@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
         <div className="nav-bar">
             <Link to="">
-                <h4>Features</h4>
+                <h4 className="hover-links">Features</h4>
             </Link>
             &emsp;
             &emsp;
@@ -14,7 +14,7 @@ const NavBar = () => {
             &emsp;
             &emsp;
             <Link to="">
-                <h4>About</h4>
+                <h4 className="hover-links">About</h4>
             </Link>
             &emsp;
             &emsp;
@@ -22,7 +22,7 @@ const NavBar = () => {
             &emsp;
             &emsp;
             <Link to="">
-                <h4>Pricing</h4>
+                <h4 className="hover-links">Pricing</h4>
             </Link>
             &emsp;
             &emsp;
@@ -30,7 +30,7 @@ const NavBar = () => {
             &emsp;
             &emsp;
             <Link to="">
-                <h4>Source code</h4>
+                <h4 className="hover-links">Source code</h4>
             </Link>
             &emsp;
             &emsp;
@@ -38,7 +38,7 @@ const NavBar = () => {
             &emsp;
             &emsp;
             <Link to="">
-                <h4>Contact</h4>
+                <h4 className="hover-links">Contact</h4>
             </Link>
         </div>
     )
