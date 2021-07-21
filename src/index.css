@@ -50,3 +50,8 @@ h1 {
   display: inline-block;
 }
 
+.sub-title {
+  margin-left: 470px;
+  max-width: 510px;
+  letter-spacing: 1px;
+}
