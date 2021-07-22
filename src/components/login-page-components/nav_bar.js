@@ -41,7 +41,7 @@ const NavBar = () => {
                 <h4 className="hover-links">Contact</h4>
             </Link>
         </div>
-    )
+    );
 }
 
 export default NavBar

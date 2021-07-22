@@ -16,7 +16,7 @@ const LoginButtons = () => {
             <button onClick={handleRoute}>Browse Anonymously</button>
             <Route path="/home" component={AnonJournalsHomePage} />
         </div>
-    )
+    );
 }
 
 export default LoginButtons

@@ -6,7 +6,7 @@ const title = () => {
         <div className="title">
             <h1>Journal My Life</h1>
         </div>
-    )
+    );
 }
 
 export default title

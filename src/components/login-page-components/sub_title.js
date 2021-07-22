@@ -9,7 +9,7 @@ const SubTitle = () => {
         <div className="sub-title">
             <h4>{subtitle_text}</h4>
         </div>
-    )
+    );
 }
 
 export default SubTitle
