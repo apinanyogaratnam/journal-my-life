@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory, Route} from 'react-router-dom';
-import { AnonJournalsHomePage } from '../index';
+import { AnonJournalsHomePage, ExistingUserJournalsHomePage } from '../index';
 
 const LoginButtons = () => {
     let history = useHistory();
@@ -19,7 +19,7 @@ const LoginButtons = () => {
             <button>Continue With Google</button>
             <button onClick={handleRouteHome}>Browse Anonymously</button>
             <Route path="/home" component={AnonJournalsHomePage} />
-            <Route path="/user/home" component={AnonJournalsHomePage} />
+            <Route path="/user/home" component={ExistingUserJournalsHomePage} />
         </div>
     );
 }
