@@ -88,4 +88,5 @@ button:hover {
 
 .hover-links:hover {
   color: black;
+  cursor: default;
 }
