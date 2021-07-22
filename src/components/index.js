@@ -7,3 +7,4 @@ export { default as SubTitle } from './login-page-components/sub_title';
 
 // journals page components
 export { default as AnonJournalsHomePage } from './journals-page-components/anon_journals_home_page';
+export { default as ExistingUserJournalsHomePage } from './journals-page-components/existing_user_journals_home_page';
