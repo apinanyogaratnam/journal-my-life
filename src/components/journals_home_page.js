@@ -5,7 +5,7 @@ const JournalsHomePage = () => {
         <div>
             <h1>Journals</h1>
         </div>
-    )
+    );
 }
 
 export default JournalsHomePage

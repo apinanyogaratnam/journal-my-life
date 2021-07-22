@@ -1,16 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
 import '../index.css';
-import { NavBar, Title, SubTitle, LoginButtons } from './login-page-components/index';
+import { Route } from 'react-router-dom';
+import { NavBar, Title, SubTitle, LoginButtons, JournalsHomePage } from './login-page-components/index';
 
 const LoginPage = () => {
     return (
         <div>
-            <NavBar />
-            <Title />
-            <SubTitle />
-            <hr />
-            <LoginButtons />
+            <Route path='/' exact render={(props) => (
+                <>
+                    <NavBar />
+                    <Title />
+                    <SubTitle />
+                    <hr />
+                    <LoginButtons />
+                </>
+            )} />
+
+            <Route path='/home' exact render={(props) => (
+                <>
+                    <JournalsHomePage />
+                </>
+            )} />
         </div>
     )
 }
