@@ -87,7 +87,12 @@ button:hover {
 }
 
 .journals-button-container {
+  margin-left: 210px;
+  margin-right: 60px;
+}
 
+.journals-button {
+  margin-right: 60px;
 }
 
 .hover-links:hover {
