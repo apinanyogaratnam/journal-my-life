@@ -10,7 +10,7 @@ const LoginButtons = () => {
     }
 
     return (
-        <div className="button-container">
+        <div className="login-button-container">
             <button>Continue With Google</button>
             <button onClick={handleRoute}>Browse Anonymously</button>
             <Route path="/home" component={AnonJournalsHomePage} />

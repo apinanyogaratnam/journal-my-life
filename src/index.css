@@ -80,10 +80,14 @@ button:hover {
   color: white;
 }
 
-.button-container {
+.login-button-container {
   width: 175px;
   margin-left: 575px;
   margin-top: 30px;
+}
+
+.journals-button-container {
+
 }
 
 .hover-links:hover {
