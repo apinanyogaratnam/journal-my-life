@@ -9,11 +9,16 @@ const LoginButtons = () => {
         history.push("/home");
     }
 
+    const handleRouteUserHome = () => {
+        history.push("/user/home");
+    }
+
     return (
         <div className="login-button-container">
             <button>Continue With Google</button>
             <button onClick={handleRouteHome}>Browse Anonymously</button>
             <Route path="/home" component={AnonJournalsHomePage} />
+            <Route path="/user/home" component={AnonJournalsHomePage} />
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../index.css';
 import { Route } from 'react-router-dom';
-import { LoginButtons, AnonJournalsHomePage, NavBar, Title, SubTitle } from '../index';
+import { LoginButtons, AnonJournalsHomePage, ExistingUserJournalsHomePage, NavBar, Title, SubTitle } from '../index';
 
 const LoginPage = () => {
     return (
@@ -19,6 +19,12 @@ const LoginPage = () => {
             <Route path='/home' exact render={(props) => (
                 <div>
                     <AnonJournalsHomePage />
+                </div>
+            )} />
+
+            <Route path='/user/home' exact render={(props) => (
+                <div>
+                    <ExistingUserJournalsHomePage />
                 </div>
             )} />
         </div>
