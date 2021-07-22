@@ -15,6 +15,7 @@ const LoginButtons = () => {
 
     return (
         <div className="login-button-container">
+            {/* onClick={handleRouteHome} */}
             <button>Continue With Google</button>
             <button onClick={handleRouteHome}>Browse Anonymously</button>
             <Route path="/home" component={AnonJournalsHomePage} />
