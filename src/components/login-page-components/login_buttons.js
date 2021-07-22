@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory, Route} from 'react-router-dom';
-import { JournalsHomePage } from '../index';
+import { AnonJournalsHomePage } from '../index';
 
 
 const LoginButtons = () => {
@@ -14,7 +14,7 @@ const LoginButtons = () => {
         <div className="button-container">
             <button>Continue With Google</button>
             <button onClick={handleRoute}>Browse Anonymously</button>
-            <Route path="/home" component={JournalsHomePage} />
+            <Route path="/home" component={AnonJournalsHomePage} />
         </div>
     )
 }
