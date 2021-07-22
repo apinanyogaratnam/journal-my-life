@@ -1,0 +1,35 @@
+﻿Journal My Life
+    Journaling web application
+
+
+Abstract
+A side project to show full stack web development skills using react.js, a backend language (java or python), and sql to store the data (planning mongo or postgres). User authentication with google account.
+
+
+UX
+Front page: 
+A login account with sign in with google (research needed, if no account already exists, auto create account, else allow user to continue) or view as anon (allows user to only view posts). 
+
+
+Secondary page: 
+Shows all journals with the author's name at the top. If the current session is a login session, have a section at the top of create post, view journals. This is the page to show all posts on the platform. If the user is logged in, have a row of buttons at the top with create post, view all journals (the user’s posts), download all journals(txt).
+
+
+Each post: 
+Each post should have the title of the journal, the date, delete post (confirm delete), journal author, edit post, change to public/private
+
+
+API
+get_all_posts(None) -> List[PostObject]
+	
+
+create_post(user, title_of_journal, current_date, formatted_journal, is_private) -> PostObject
+	“””Extract author name from user. post_id of -1 means post could not be created. Add to db.“””
+delete_post(user, post_id) -> post_id
+	“””post_id of -1 means post was deleted successfully. Remove from db.”
+edit_post(user, post_id, formatted_journal) -> post_id
+	“””Pass in updated formatted_journal. Update db.”””
+get_post(post_id) -> PostObject
+	“””Get post from all posts”””
+get_post_from_user(user, post_id) -> PostObject
+* change the name post to journal
