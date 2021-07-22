@@ -1,13 +1,17 @@
 import React from 'react'
 
 const AnonJournalsHomePage = () => {
+    const alertAccountNeeded = () => {
+        alert("Please sign in to create a post");
+    }
+
     return (
         <div>
             <h1>Journals</h1>
             <div className="journals-button-container">
-                <button className="journals-button">Create Post</button>
-                <button className="journals-button">View My Journals</button>
-                <button className="journals-button">Download My Journals</button>
+                <button className="journals-button" onClick={alertAccountNeeded}>Create Post</button>
+                <button className="journals-button" onClick={alertAccountNeeded}>View My Journals</button>
+                <button className="journals-button" onClick={alertAccountNeeded}>Download My Journals</button>
             </div>
             <div className="journals-container">
                 <div className="journal-container journal-text">
