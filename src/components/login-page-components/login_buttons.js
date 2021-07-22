@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory, Route} from 'react-router-dom';
 import { AnonJournalsHomePage } from '../index';
 
-
 const LoginButtons = () => {
     let history = useHistory();
 
