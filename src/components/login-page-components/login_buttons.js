@@ -39,7 +39,7 @@ const LoginButtons = () => {
                 clientId="705798389505-tekjliqf2bfbfsk5pi4s6n0ghprg8dud.apps.googleusercontent.com"
                 render={renderProps => (
                     <button onClick={renderProps.onClick} style={customStyle}>Continue with Google</button>
-                  )}
+                )}
                 onSuccess={onSuccess}
                 onFailure={onFailure}
                 cookiePolicy={'single_host_origin'}
