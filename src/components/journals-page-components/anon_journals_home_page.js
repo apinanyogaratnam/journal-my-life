@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const AnonJournalsHomePage = () => {
+    const [objects, setObjects] = useState([])
+
+    const url = "";
+
+    useEffect(() => {
+        axios.get(url)
+            .then(res => {
+                console.log(res)
+                setObjects(res.data)
+            }).catch(err => {
+                console.log(err);
+            })
+    }, [])
+
     const alertAccountNeeded = () => {
         alert("Please sign in continue");
     }
+
+    console.log(objects.data);
 
     return (
         <div>
