@@ -6,27 +6,11 @@ import { LoginButtons, AnonJournalsHomePage, ExistingUserJournalsHomePage, NavBa
 const LoginPage = () => {
     return (
         <div>
-            <Route path='/' exact render={(props) => (
-                <div>
-                    <NavBar />
-                    <Title />
-                    <SubTitle />
-                    <hr />
-                    <LoginButtons />
-                </div>
-            )} />
-
-            <Route path='/home' exact render={(props) => (
-                <div>
-                    <AnonJournalsHomePage />
-                </div>
-            )} />
-
-            <Route path='/user/home' exact render={(props) => (
-                <div>
-                    <ExistingUserJournalsHomePage />
-                </div>
-            )} />
+            <NavBar />
+            <Title />
+            <SubTitle />
+            <hr />
+            <LoginButtons />
         </div>
     );
 }
