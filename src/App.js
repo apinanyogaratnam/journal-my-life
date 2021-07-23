@@ -1,4 +1,4 @@
-import { LoginPage, AnonJournalsHomePage, ExistingUserJournalsHomePage, CreatePost } from './components/index';
+import { LoginPage, AnonJournalsHomePage, ExistingUserJournalsHomePage, CreatePost, ViewJournals } from './components/index';
 import { Route } from 'react-router-dom'
 
 function App() {
@@ -21,7 +21,11 @@ function App() {
       )} />
 
       <Route path='/user/create-post' exact render={(props) => (
-          < CreatePost onAdd={addPost}/>
+          <CreatePost onAdd={addPost}/>
+      )} />
+
+      <Route path='/user/view-journals' exact render={(props) => (
+          <ViewJournals />
       )} />
     </div>
   );

@@ -8,9 +8,11 @@ const ExistingUserJournalsHomePage = () => {
     const userData = location.state;
 
     const handleRouteUserHome = () => {
-        // pass in props and get props when creating a post
-        // complete the code in create_post.js
         history.push("/user/create-post", userData);
+    }
+
+    const handleRouteViewJournals = () => {
+        history.push("/user/view-journals", userData);
     }
 
     const registerUserAndGetData = () => {
@@ -20,9 +22,19 @@ const ExistingUserJournalsHomePage = () => {
         // get request of user data (get info)
         // if the info is a clean slate, means user is new
         console.log(userData);
+        return;
     }
 
-    registerUserAndGetData();
+    const currentData = registerUserAndGetData();
+
+    const downloadJournals = () => {
+        // download journals as a txt file
+        // 1. create txt file
+        // 2. loop through all user's journals
+        // 3. add journals to txt file with formatting journal metadata (date, title, etc.)
+        // 4. close file
+        // 5. download the file
+    }
 
     // use .map here to load all user's journals
     return (
@@ -30,8 +42,8 @@ const ExistingUserJournalsHomePage = () => {
             <h1>Journals</h1>
             <div className="journals-button-container">
                 <button className="journals-button" onClick={handleRouteUserHome}>Create Post</button>
-                <button className="journals-button">View My Journals</button>
-                <button className="journals-button">Download My Journals</button>
+                <button className="journals-button" onClick={handleRouteViewJournals}>View My Journals</button>
+                <button className="journals-button" onClick={downloadJournals}>Download My Journals</button>
             </div>
             <div className="journals-container">
                 <div className="journal-container journal-text">
