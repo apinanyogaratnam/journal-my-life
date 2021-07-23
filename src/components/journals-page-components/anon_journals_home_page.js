@@ -2,7 +2,7 @@ import React from 'react'
 
 const AnonJournalsHomePage = () => {
     const alertAccountNeeded = () => {
-        alert("Please sign in to create a post");
+        alert("Please sign in continue");
     }
 
     return (

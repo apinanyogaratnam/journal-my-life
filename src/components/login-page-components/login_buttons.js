@@ -15,8 +15,8 @@ const LoginButtons = () => {
     }
 
     const onSuccess = (response) => {
-        console.log(response);
-        console.log(response.profileObj);
+        // console.log(response);
+        // console.log(response.profileObj);
         handleRouteUserHome();
     }
 

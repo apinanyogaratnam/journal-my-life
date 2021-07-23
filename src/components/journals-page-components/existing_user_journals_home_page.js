@@ -1,13 +1,25 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
 
-const ExistingUserJournalsHomePage = () => {
+const ExistingUserJournalsHomePage = ({ userGoogleInfo }) => {
     const history = useHistory();
 
     const handleRouteUserHome = () => {
         history.push("/user/create-post");
     }
 
+    const registerUserAndGetData = () => {
+        // if user's email does not exist, add user to db
+        // this conditional check would be done in the backend API
+        // post request api with user's info (give info)
+        // get request of user data (get info)
+        // if the info is a clean slate, means user is new
+        console.log(userGoogleInfo);
+    }
+
+    registerUserAndGetData();
+
+    // use .map here to load all user's journals
     return (
         <div>
             <h1>Journals</h1>
