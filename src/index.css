@@ -101,7 +101,7 @@ button:hover {
 }
 
 .login-button-container {
-  width: 175px;
+  width: 500px;
   margin-left: 575px;
   margin-top: 30px;
 }
@@ -191,4 +191,12 @@ button:hover {
 .checkbox-container {
   margin-left: 46%;
   margin-right: 25%;
+}
+
+.google-button {
+  font-family: 'Poppins';
+  font-weight: bolder;
+  border-color: black;
+  border-radius: 5px;
+  border-width: 1px;
 }
