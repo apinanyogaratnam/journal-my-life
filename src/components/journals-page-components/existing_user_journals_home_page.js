@@ -36,6 +36,13 @@ const ExistingUserJournalsHomePage = () => {
         // 5. download the file
     }
 
+    const getAllJournals = () => {
+        // call the api to get all data
+        // loop through object to get all journals
+            // set condition to filter out private journals
+        // return object of journals
+    }
+
     // use .map here to load all user's journals
     return (
         <div>
