@@ -171,9 +171,21 @@ button:hover {
 
 .submit-button {
   margin-top: 40px;
-  width: 30%;
-  margin-left: 35%;
-  margin-right: 35%;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-bottom: 10px;
+  border-color: black;
+  border-radius: 5px;
+  border-width: 1px;
+  height: 40px;
+  font-family: 'Poppins';
+  font-weight: bolder;
+}
+
+.submit-button:hover {
+  background-color: rgb(61, 60, 60);
+  color: white;
 }
 
 .checkbox-container {
