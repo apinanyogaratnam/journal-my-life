@@ -1,0 +1,4 @@
+flask
+dotenv
+jsonify
+gunicorn
