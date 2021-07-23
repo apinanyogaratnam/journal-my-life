@@ -2,6 +2,10 @@ import { LoginPage, AnonJournalsHomePage, ExistingUserJournalsHomePage, CreatePo
 import { Route } from 'react-router-dom'
 
 function App() {
+  const addPost = (post) => {
+      console.log(post);
+  }
+
   return (
     <div>
       <Route path='/' exact render={(props) => (
@@ -17,7 +21,7 @@ function App() {
       )} />
 
       <Route path='/user/create-post' exact render={(props) => (
-          < CreatePost/>
+          < CreatePost onAdd={addPost}/>
       )} />
     </div>
   );

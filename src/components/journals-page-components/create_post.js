@@ -1,16 +1,25 @@
 import React, { useState } from 'react'
 
-const CreatePost = () => {
+const CreatePost = ({ onAdd }) => {
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
     const [checkbox, setCheckbox] = useState(false)
 
     const onSubmit = (e) => {
         e.preventDefault();
-    }
 
-    // if (!title) alert("Please fill out the title");
-    console.log(title);
+        if (!title) {
+            alert("Please fill out the title");
+            return;
+        }
+
+        onAdd({ title, text, checkbox });
+
+        setTitle('');
+        setText('');
+        setCheckbox(false);
+    }
+    
 
     return (
         <div>
@@ -25,7 +34,7 @@ const CreatePost = () => {
                 <div className="checkbox-container"> 
                     <label>
                     Private Post&nbsp;
-                    <input value={checkbox} type="checkbox" onChange={(e) => setCheckbox(e.target.value)}></input>
+                    <input value={checkbox} type="checkbox" onChange={(e) => setCheckbox(e.currentTarget.checked)}></input>
                     </label>
                 </div>
                 <input type="submit" value="Create Post" className="submit-button"></input>
