@@ -3,7 +3,7 @@ import React from 'react'
 const create_post = () => {
     return (
         <div>
-            Here
+            <input></input>
         </div>
     )
 }
