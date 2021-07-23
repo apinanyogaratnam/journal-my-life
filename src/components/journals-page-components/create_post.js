@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 const CreatePost = ({ onAdd }) => {
     const history = useHistory();
+    const location = useLocation();
+
+    const userData = location.state;
 
     const redirectToJournals = () => {
         history.push("/user/home");
@@ -11,6 +14,10 @@ const CreatePost = ({ onAdd }) => {
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
     const [checked, setCheckbox] = useState(false)
+
+    const addJournalToAPI = () => {
+        // push new post to api
+    }
 
     const onSubmit = (e) => {
         e.preventDefault();

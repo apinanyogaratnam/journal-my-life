@@ -10,14 +10,12 @@ const LoginButtons = () => {
         history.push("/home");
     }
 
-    const handleRouteUserHome = () => {
-        history.push("/user/home");
+    const handleRouteUserHome = (props) => {
+        history.push("/user/home", props);
     }
 
     const onSuccess = (response) => {
-        // console.log(response);
-        // console.log(response.profileObj);
-        handleRouteUserHome();
+        handleRouteUserHome(response.profileObj);
     }
 
     const onFailure = () => {

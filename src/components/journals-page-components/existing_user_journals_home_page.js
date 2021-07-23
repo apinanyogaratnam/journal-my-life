@@ -1,11 +1,16 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
-const ExistingUserJournalsHomePage = ({ userGoogleInfo }) => {
+const ExistingUserJournalsHomePage = () => {
     const history = useHistory();
+    const location = useLocation();
+
+    const userData = location.state;
 
     const handleRouteUserHome = () => {
-        history.push("/user/create-post");
+        // pass in props and get props when creating a post
+        // complete the code in create_post.js
+        history.push("/user/create-post", userData);
     }
 
     const registerUserAndGetData = () => {
@@ -14,7 +19,7 @@ const ExistingUserJournalsHomePage = ({ userGoogleInfo }) => {
         // post request api with user's info (give info)
         // get request of user data (get info)
         // if the info is a clean slate, means user is new
-        console.log(userGoogleInfo);
+        console.log(userData);
     }
 
     registerUserAndGetData();
