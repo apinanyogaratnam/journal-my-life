@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const CreatePost = ({ onAdd }) => {
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
-    const [checkbox, setCheckbox] = useState(false)
+    const [checked, setCheckbox] = useState(false)
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -13,7 +13,7 @@ const CreatePost = ({ onAdd }) => {
             return;
         }
 
-        onAdd({ title, text, checkbox });
+        onAdd({ title, text, checked });
 
         setTitle('');
         setText('');
@@ -25,8 +25,8 @@ const CreatePost = ({ onAdd }) => {
         <div>
             <h1>Create Post</h1>
             <form onSubmit={onSubmit}>
-                <div value={title} className="input-journal-title-container">
-                    <input placeholder="Title" className="input-journal-title" onChange={(e) => setTitle(e.target.value)}></input>
+                <div className="input-journal-title-container">
+                    <input value={title} placeholder="Title" className="input-journal-title" onChange={(e) => setTitle(e.target.value)}></input>
                 </div>
                 <div className="input-journal-title-container">
                     <textarea value={text} placeholder="Once upon a time..." className="input-journal-text" onChange={(e) => setText(e.target.value)}></textarea>
@@ -34,7 +34,7 @@ const CreatePost = ({ onAdd }) => {
                 <div className="checkbox-container"> 
                     <label>
                     Private Post&nbsp;
-                    <input value={checkbox} type="checkbox" onChange={(e) => setCheckbox(e.currentTarget.checked)}></input>
+                    <input value={checked} type="checkbox" checked={checked} onChange={(e) => setCheckbox(e.currentTarget.checked)}></input>
                     </label>
                 </div>
                 <input type="submit" value="Create Post" className="submit-button"></input>
