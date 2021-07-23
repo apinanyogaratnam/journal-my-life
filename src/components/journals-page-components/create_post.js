@@ -13,6 +13,11 @@ const CreatePost = ({ onAdd }) => {
             return;
         }
 
+        if (!text) {
+            alert("Please add some text to your journal");
+            return;
+        }
+
         onAdd({ title, text, checked });
 
         setTitle('');
