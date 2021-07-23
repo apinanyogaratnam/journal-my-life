@@ -1,6 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const CreatePost = ({ onAdd }) => {
+    const history = useHistory();
+
+    const redirectToJournals = () => {
+        history.push("/user/home");
+    }
+
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
     const [checked, setCheckbox] = useState(false)
@@ -23,8 +30,9 @@ const CreatePost = ({ onAdd }) => {
         setTitle('');
         setText('');
         setCheckbox(false);
+        alert("posted successfully");
+        redirectToJournals();
     }
-    
 
     return (
         <div>
