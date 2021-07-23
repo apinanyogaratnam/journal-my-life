@@ -1,12 +1,18 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom';
 
 const ExistingUserJournalsHomePage = () => {
+    const history = useHistory();
+
+    const handleRouteUserHome = () => {
+        history.push("/user/create-post");
+    }
 
     return (
         <div>
             <h1>Journals</h1>
             <div className="journals-button-container">
-                <button className="journals-button">Create Post</button>
+                <button className="journals-button" onClick={handleRouteUserHome}>Create Post</button>
                 <button className="journals-button">View My Journals</button>
                 <button className="journals-button">Download My Journals</button>
             </div>
