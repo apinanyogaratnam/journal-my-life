@@ -22,12 +22,34 @@ h4 {
   text-align: center;
 }
 
-h1, h2 {
+h1 {
   color: rgb(97, 97, 97);
   font-family: 'Lato';
   display: inline-block;
   text-align: center;
   font-size: 40px;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+h2 {
+  color: rgb(97, 97, 97);
+  font-family: 'Lato';
+  display: inline-block;
+  text-align: center;
+  font-size: 35px;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+h5 {
+  color: rgb(97, 97, 97);
+  font-family: 'Lato';
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
   justify-content: center;
   align-content: center;
   display: flex;
@@ -121,4 +143,40 @@ button:hover {
 
 .journal-text {
   text-align: center;
+}
+
+.input-journal-title-container {
+  margin-top: 130px;
+  justify-content: center;
+  display: flex;
+}
+
+.input-journal-title {
+  width: 700px;
+  height: 50px;
+  font-size: xx-large;
+  font-family: 'Lato';
+  font-weight: 900;
+}
+
+.input-journal-text {
+  width: 700px;
+  height: 300px;
+  margin-top: -120px;
+  font-family: 'Poppins';
+  font-size: medium;
+  color:rgb(97, 97, 97);
+  resize: none;
+}
+
+.submit-button {
+  margin-top: 40px;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.checkbox-container {
+  margin-left: 46%;
+  margin-right: 25%;
 }
