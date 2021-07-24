@@ -19,7 +19,7 @@ const ViewJournals = () => {
                 var arrayOfUserPosts = [];
                 const allUsers = res.data.data;
                 for (let user of allUsers) {
-                    if (user.email == emailOfUser) {
+                    if (user.email === emailOfUser) {
                         const journalsOfUser = user.journals;
                         for (let journal of journalsOfUser) {
                             arrayOfUserPosts.push(journal);
@@ -31,7 +31,7 @@ const ViewJournals = () => {
             }).catch(err => {
                 console.log(err);
             })
-    }, [], [])
+    }, [])
 
     return (
         <div>

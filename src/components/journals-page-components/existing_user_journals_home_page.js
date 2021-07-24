@@ -3,11 +3,11 @@ import { useHistory, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 const ExistingUserJournalsHomePage = () => {
-    const [objects, setObjects] = useState([]);
+    const [users, setUsers] = useState([]);
     const [posts, setPosts] = useState([]);
     const url = "https://journal-my-life-api.herokuapp.com/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0";
 
-    useEffect(() => {
+    const fetchData = () => {
         axios.get(url)
             .then(res => {
                 var arrayOfPublicPosts = [];
@@ -22,11 +22,15 @@ const ExistingUserJournalsHomePage = () => {
                         }
                     }
                 }
-                setObjects(res.data);
+                setUsers(allUsers);
                 setPosts(arrayOfPublicPosts);
             }).catch(err => {
                 console.log(err);
             })
+    }
+    
+    useEffect(() => {
+        fetchData();
     }, [], [])
 
     const history = useHistory();
@@ -43,16 +47,31 @@ const ExistingUserJournalsHomePage = () => {
     }
 
     const registerUserAndGetData = () => {
+        // check if user exists already
+        const userExists = () => {
+            for (let user of users) {
+                if (user.email === userData.email) {
+                    return true;
+                }
+            }
+            return false;
+        }
         // if user's email does not exist, add user to db
+        if (!userExists()) {
+            axios.post("http://localhost:5000//api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0", {
+                "name": userData.name,
+                "email": userData.email,
+                "journals": []
+            });
+        }
         // this conditional check would be done in the backend API
         // post request api with user's info (give info)
         // get request of user data (get info)
         // if the info is a clean slate, means user is new
         // console.log(userData);
-        return;
     }
 
-    const currentData = registerUserAndGetData();
+    // const currentData = registerUserAndGetData();
 
     const downloadJournals = () => {
         // download journals as a txt file
@@ -69,6 +88,8 @@ const ExistingUserJournalsHomePage = () => {
             // set condition to filter out private journals
         // return object of journals
     }
+
+    registerUserAndGetData();
 
     return (
         <div>
