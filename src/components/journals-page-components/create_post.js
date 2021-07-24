@@ -19,6 +19,20 @@ const CreatePost = ({ onAdd }) => {
         // push new post to api
     }
 
+    const sendDataToServer = async () => {
+        const data = {"title": title, "text": text, "isPrivate": checked};
+        const response = await fetch('https://journal-my-life-api.herokuapp.com/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0',
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) console.log("response worked!");
+    }
+
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -34,6 +48,8 @@ const CreatePost = ({ onAdd }) => {
 
         onAdd({ title, text, checked });
 
+        sendDataToServer();
+
         setTitle('');
         setText('');
         setCheckbox(false);
@@ -46,7 +62,7 @@ const CreatePost = ({ onAdd }) => {
             <h1>Create Post</h1>
             <form onSubmit={onSubmit}>
                 <div className="input-journal-title-container">
-                    <input value={title} placeholder="Title" className="input-journal-title" onChange={(e) => setTitle(e.target.value)}></input>
+                    <input name="title" value={title} placeholder="Title" className="input-journal-title" onChange={(e) => setTitle(e.target.value)}></input>
                 </div>
                 <div className="input-journal-title-container">
                     <textarea value={text} placeholder="Once upon a time..." className="input-journal-text" onChange={(e) => setText(e.target.value)}></textarea>
@@ -60,7 +76,7 @@ const CreatePost = ({ onAdd }) => {
                 <input type="submit" value="Create Post" className="submit-button"></input>
             </form>
         </div>
-    )
+    );
 }
 
 export default CreatePost
