@@ -11,10 +11,14 @@ const AnonJournalsHomePage = () => {
             .then(res => {
                 var arrayOfPublicPosts = [];
                 const allUsers = res.data.data;
-                for (let i=0; i<allUsers.length; i++) {
-                    const journal = allUsers[i].journals;
-                    if (!journal.isPrivate) {
-                        arrayOfPublicPosts.push(journal);
+
+                for (let user of allUsers) {
+                    const journals = user.journals;
+
+                    for (let journal of journals) {
+                        if (!journal.isPrivate) {
+                            arrayOfPublicPosts.push(journal);
+                        }
                     }
                 }
                 setObjects(res.data);
