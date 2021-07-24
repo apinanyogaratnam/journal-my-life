@@ -2,25 +2,31 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const AnonJournalsHomePage = () => {
-    const [objects, setObjects] = useState([])
-
-    const url = "";
+    const [objects, setObjects] = useState([]);
+    const [posts, setPosts] = useState([]);
+    const url = "https://journal-my-life-api.herokuapp.com/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0";
 
     useEffect(() => {
         axios.get(url)
             .then(res => {
-                console.log(res)
-                setObjects(res.data)
+                var arrayOfPublicPosts = [];
+                const allUsers = res.data.data;
+                for (let i=0; i<allUsers.length; i++) {
+                    const journal = allUsers[i].journals;
+                    if (!journal.isPrivate) {
+                        arrayOfPublicPosts.push(journal);
+                    }
+                }
+                setObjects(res.data);
+                setPosts(arrayOfPublicPosts);
             }).catch(err => {
                 console.log(err);
             })
-    }, [])
+    }, [], [])
 
     const alertAccountNeeded = () => {
         alert("Please sign in continue");
     }
-
-    console.log(objects.data);
 
     return (
         <div>
@@ -31,26 +37,16 @@ const AnonJournalsHomePage = () => {
                 <button className="journals-button" onClick={alertAccountNeeded}>Download My Journals</button>
             </div>
             <div className="journals-container">
-                <div className="journal-container journal-text">
-                    <h2>Journal Title</h2>
-                    <h3 className="journal-author">- Author</h3>
-                    <h4>This is a sample journal blah blah blah</h4>
-                </div>
-                <div className="journal-container journal-text">
-                    <h2>Journal Title</h2>
-                    <h3 className="journal-author">- Author</h3>
-                    <h4>This is a sample journal blah blah blah</h4>
-                </div>
-                <div className="journal-container journal-text">
-                    <h2>Journal Title</h2>
-                    <h3 className="journal-author">- Author</h3>
-                    <h4>This is a sample journal blah blah blah</h4>
-                </div>
-                <div className="journal-container journal-text">
-                    <h2>Journal Title</h2>
-                    <h3 className="journal-author">- Author</h3>
-                    <h4>This is a sample journal blah blah blah</h4>
-                </div>
+                {posts.map(post => {
+                    console.log(post.text);
+                    return (
+                        <div key={"id"} className="journal-container journal-text">
+                            <h2>{post.title}</h2>
+                            <h3 className="journal-author">- {post.author}</h3>
+                            <h4>{post.text}</h4>
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
