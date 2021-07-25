@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
         <div className="nav-bar">
             <Link to="">
-                <a onClick={()=> window.open("https://github.com/apinanyogaratnam/journal-my-life", "_blank")}>
+                <a onClick={()=> window.open("https://github.com/apinanyogaratnam/journal-my-life#features", "_blank")}>
                     <h4 className="hover-links">Features</h4>
                 </a>
             </Link>

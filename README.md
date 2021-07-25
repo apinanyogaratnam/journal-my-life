@@ -16,6 +16,8 @@
 - View Your Journals
 - View all Public Journals
 - View your raw data
+- Continue with Google
+- Continue Anonymously
 
 ## About
 API was built using Flask (update API code)
