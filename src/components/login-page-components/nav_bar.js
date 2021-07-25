@@ -6,7 +6,9 @@ const NavBar = () => {
     return (
         <div className="nav-bar">
             <Link to="">
-                <h4 className="hover-links">Features</h4>
+                <a onClick={()=> window.open("https://github.com/apinanyogaratnam/journal-my-life", "_blank")}>
+                    <h4 className="hover-links">Features</h4>
+                </a>
             </Link>
             &emsp;
             &emsp;
@@ -14,7 +16,9 @@ const NavBar = () => {
             &emsp;
             &emsp;
             <Link to="">
-                <h4 className="hover-links">About</h4>
+                <a onClick={()=> window.open("https://github.com/apinanyogaratnam/journal-my-life#about", "_blank")}>
+                    <h4 className="hover-links">About</h4>
+                </a>
             </Link>
             &emsp;
             &emsp;
@@ -30,7 +34,9 @@ const NavBar = () => {
             &emsp;
             &emsp;
             <Link to="">
-                <h4 className="hover-links">Source code</h4>
+                <a onClick={()=> window.open("https://github.com/apinanyogaratnam/journal-my-life", "_blank")}>
+                    <h4 className="hover-links">Features</h4>
+                </a>
             </Link>
             &emsp;
             &emsp;
