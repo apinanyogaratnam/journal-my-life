@@ -51,29 +51,15 @@ const ExistingUserJournalsHomePage = () => {
         // if user's email does not exist, add user to db
         // this conditional check done in the backend API
         // post request api with user's info (give info)
-        axios.post(dev, {
+        axios.post(heroku, {
             "name": userData.name,
             "email": userData.email,
             "journals": []
         });
     }
 
-    // const currentData = registerUserAndGetData();
-
-    const downloadJournals = () => {
-        // download journals as a txt file
-        // 1. create txt file
-        // 2. loop through all user's journals
-        // 3. add journals to txt file with formatting journal metadata (date, title, etc.)
-        // 4. close file
-        // 5. download the file
-    }
-
-    const getAllJournals = () => {
-        // call the api to get all data
-        // loop through object to get all journals
-            // set condition to filter out private journals
-        // return object of journals
+    const handleRouteViewRawData = () => {
+        window.open("https://journal-my-life-api.herokuapp.com/" + userData.email);
     }
 
     registerUserAndGetData();
@@ -84,7 +70,7 @@ const ExistingUserJournalsHomePage = () => {
             <div className="journals-button-container">
                 <button className="journals-button" onClick={handleRouteUserHome}>Create Post</button>
                 <button className="journals-button" onClick={handleRouteViewJournals}>View My Journals</button>
-                <button className="journals-button" onClick={downloadJournals}>Download My Journals</button>
+                <button className="journals-button" onClick={handleRouteViewRawData}>View Raw Data</button>
             </div>
             <div className="journals-container">
                 {/* Load all journals */}

@@ -39,7 +39,7 @@ const AnonJournalsHomePage = () => {
             <div className="journals-button-container">
                 <button className="journals-button" onClick={alertAccountNeeded}>Create Post</button>
                 <button className="journals-button" onClick={alertAccountNeeded}>View My Journals</button>
-                <button className="journals-button" onClick={alertAccountNeeded}>Download My Journals</button>
+                <button className="journals-button" onClick={alertAccountNeeded}>Download My Data</button>
             </div>
             <div className="journals-container">
                 {posts.map(post => {
