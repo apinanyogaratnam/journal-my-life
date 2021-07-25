@@ -9,7 +9,6 @@
 ![image3](completed-design/image3.png)
 ![image4](completed-design/image4.png)
 ![image5](completed-design/image5.png)
-![image6](completed-design/image6.png)
 
 # WARNING: DO NOT PUT SENSITIVE INFORMATION WHEN CREATING A JOURNAL
 
