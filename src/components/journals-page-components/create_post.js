@@ -9,7 +9,7 @@ const CreatePost = ({ onAdd }) => {
     const userData = location.state;
 
     const redirectToJournals = () => {
-        history.push("/user/home");
+        history.push("/user/home", userData);
     }
 
     const [title, setTitle] = useState('')
@@ -30,9 +30,15 @@ const CreatePost = ({ onAdd }) => {
         }
 
         onAdd({ title, text, checked });
+        const dev = "http://localhost:5000/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0";
+        const heroku = "https://journal-my-life-api.herokuapp.com/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0";
 
-        axios.post("https://journal-my-life-api.herokuapp.com/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0", {
-            
+        axios.post(heroku, {
+            "title": title, 
+            "text": text, 
+            "isPrivate": checked,
+            "email": userData.email,
+            "author": userData.name
         });
 
         setTitle('');

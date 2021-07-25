@@ -5,16 +5,17 @@ import axios from 'axios';
 const ViewJournals = () => {
     const [objects, setObjects] = useState([]);
     const [posts, setPosts] = useState([]);
-    const url = "https://journal-my-life-api.herokuapp.com/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0";
+    const dev = "http://localhost:5000/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0";
+    const heroku = "https://journal-my-life-api.herokuapp.com/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0";
 
     const history = useHistory();
     const location = useLocation();
 
     const userData = location.state;
-    const emailOfUser = location.state.email;
+    const emailOfUser = userData.email;
 
     useEffect(() => {
-        axios.get(url)
+        axios.get(heroku)
             .then(res => {
                 var arrayOfUserPosts = [];
                 const allUsers = res.data.data;
