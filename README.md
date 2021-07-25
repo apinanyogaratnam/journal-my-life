@@ -1,5 +1,7 @@
 # Journal My Life FullStack Web Application
 
+# WARNING: DO NOT PUT SENSITIVE INFORMATION WHEN CREATING A JOURNAL
+
 ## Run locally
 1. clone the repository
 2. change directory to journal-my-life
