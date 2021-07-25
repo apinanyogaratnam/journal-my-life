@@ -26,16 +26,8 @@ const NavBar = () => {
             &emsp;
             &emsp;
             <Link to="">
-                <h4 className="hover-links">Pricing</h4>
-            </Link>
-            &emsp;
-            &emsp;
-            <div class="vl" />
-            &emsp;
-            &emsp;
-            <Link to="">
-                <a onClick={()=> window.open("https://github.com/apinanyogaratnam/journal-my-life", "_blank")}>
-                    <h4 className="hover-links">Features</h4>
+                <a onClick={()=> window.open("https://www.cctvcambridge.org/sites/default/files/styles/960x540/public/imagefield/free.jpg?itok=GHYEdiDE", "_blank")}>
+                    <h4 className="hover-links">Pricing</h4>
                 </a>
             </Link>
             &emsp;
@@ -44,7 +36,19 @@ const NavBar = () => {
             &emsp;
             &emsp;
             <Link to="">
-                <h4 className="hover-links">Contact</h4>
+                <a onClick={()=> window.open("https://github.com/apinanyogaratnam/journal-my-life", "_blank")}>
+                    <h4 className="hover-links">Source Code</h4>
+                </a>
+            </Link>
+            &emsp;
+            &emsp;
+            <div class="vl" />
+            &emsp;
+            &emsp;
+            <Link to="">
+                <a onClick={()=> window.open("https://apinanyogaratnam.github.io/my-personal-website-v2.0/", "_blank")}>
+                    <h4 className="hover-links">Contact</h4>
+                </a>
             </Link>
         </div>
     );
