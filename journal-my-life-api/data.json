@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "email": "stella@icloud.com",
+            "journals": [
+                {
+                    "author": "Stella Stein",
+                    "date": "23/07/2021",
+                    "id": 2,
+                    "isPrivate": false,
+                    "text": "This is a test journal1",
+                    "title": "Testing journal1"
+                }
+            ],
+            "name": "Stella Stein"
+        },
+        {
+            "email": "harryharry@icloud.com",
+            "journals": [
+                {
+                    "author": "Harry Houdini",
+                    "date": "25/07/2021",
+                    "id": 3,
+                    "isPrivate": false,
+                    "text": "This is a test journal2",
+                    "title": "Testing journal2"
+                }
+            ],
+            "name": "Harry Houdini"
+        }
+    ]
+}
