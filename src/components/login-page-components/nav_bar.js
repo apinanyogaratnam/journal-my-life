@@ -3,6 +3,9 @@ import '../../index.css';
 import { Link } from 'react-scroll';
 
 const NavBar = () => {
+
+    const contact_link = "http://localhost:3000/#:~:text=Resume-,Copyright%20%C2%A9%202021";
+
     return (
         <div className="nav-bar">
             <Link to="">
@@ -46,7 +49,7 @@ const NavBar = () => {
             &emsp;
             &emsp;
             <Link to="">
-                <a onClick={()=> window.open("https://apinanyogaratnam.github.io/my-personal-website-v2.0/", "_blank")}>
+                <a onClick={()=> window.open(contact_link, "_blank")}>
                     <h4 className="hover-links">Contact</h4>
                 </a>
             </Link>
