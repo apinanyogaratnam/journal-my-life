@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 const NavBar = () => {
 
-    const contact_link = "http://localhost:3000/#:~:text=Resume-,Copyright%20%C2%A9%202021";
+    const contact_link = "https://apinanyogaratnam.github.io/my-personal-website-v2.0/#:~:text=Resume-,Copyright%20%C2%A9%202021";
 
     return (
         <div className="nav-bar">
