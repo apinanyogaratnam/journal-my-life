@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 
-const CreatePost = ({ onAdd }) => {
+const CreatePost = () => {
     const history = useHistory();
     const location = useLocation();
 
@@ -29,9 +29,8 @@ const CreatePost = ({ onAdd }) => {
             return;
         }
 
-        onAdd({ title, text, checked });
-        const dev = "http://localhost:5000/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0";
-        const heroku = "https://journal-my-life-api.herokuapp.com/api/v1/token=20d2g15n-7z2s-3h3d-2b25-62h59274d4h0";
+        const dev = `http://localhost:5000${process.env.REACT_APP_API_KEY}`;
+        const heroku = `https://journal-my-life-api.herokuapp.com${process.env.REACT_APP_API_KEY}`;
 
         axios.post(heroku, {
             "title": title, 
