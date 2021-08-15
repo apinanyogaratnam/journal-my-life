@@ -1,7 +1,6 @@
 # Journal My Life FullStack Web Application
 
-## Website
-### `https://journal-my-life.herokuapp.com/`
+## Website: `https://journal-my-life.herokuapp.com/`
 
 ### Design
 ![image1](completed-design/image1.png)
