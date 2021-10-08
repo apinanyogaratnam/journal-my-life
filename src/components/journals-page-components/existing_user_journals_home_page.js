@@ -63,7 +63,7 @@ const ExistingUserJournalsHomePage = () => {
         // this conditional check done in the backend API
         // post request api with user's info (give info)
         handleLoginValidatorRedirect();
-        axios.post(heroku, {
+        axios.post(url, {
             "name": userData.name,
             "email": userData.email,
             "journals": []
