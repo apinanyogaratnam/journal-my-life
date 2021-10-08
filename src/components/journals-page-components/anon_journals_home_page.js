@@ -9,9 +9,12 @@ const AnonJournalsHomePage = () => {
     const [posts, setPosts] = useState([]);
     const dev = `http://localhost:5000${process.env.REACT_APP_API_KEY}`;
     const heroku = `https://journal-my-life-api.herokuapp.com${process.env.REACT_APP_API_KEY}`;
+    const baseUrl = process.env.REACT_APP_BASE_URL;
+    const apiKey = process.env.REACT_APP_API_KEY;
+    const url = baseUrl + apiKey;
 
     useEffect(() => {
-        axios.get(heroku)
+        axios.get(url)
             .then(res => {
                 var arrayOfPublicPosts = [];
                 const allUsers = res.data.data;
