@@ -1,4 +1,4 @@
-# Journal My Life FullStack Web Application
+# [DEPRECATED] Journal My Life FullStack Web Application
 
 ## Website: `https://journal-my-life.herokuapp.com/`
 
